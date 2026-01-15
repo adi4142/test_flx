@@ -1,6 +1,8 @@
 {
   "routes": [
-    "project_types"
+    "divisions",
+    "project_types",
+    "departments"
   ],
   "route_publics": []
 }
