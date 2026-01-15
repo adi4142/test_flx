@@ -1,0 +1,255 @@
+{
+  "id": "project_types",
+  "label": "Project Type",
+  "description": "Defines categories for project types used in project management, including name and status.",
+  "fields": [
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "ID",
+      "reference": "id",
+      "type": "integer",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": true
+    },
+    {
+      "options_source": null,
+      "column_width": 6.0,
+      "label": "Name",
+      "reference": "name",
+      "type": "text",
+      "auto_generated": null,
+      "required": true,
+      "pattern": "^[a-zA-Z0-9\\s]{3,}$",
+      "pattern_error": null,
+      "min_length": 3,
+      "max_length": 255,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 4.0,
+      "label": "Code",
+      "reference": "code",
+      "type": "text",
+      "auto_generated": null,
+      "required": true,
+      "pattern": "^[A-Z0-9]{3,}$",
+      "pattern_error": null,
+      "min_length": 3,
+      "max_length": 10,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": "backend.project_statuses({id}:{name})",
+      "column_width": 3.0,
+      "label": "Status",
+      "reference": "status_id",
+      "type": "integer",
+      "auto_generated": null,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "Created At",
+      "reference": "created_at",
+      "type": "datetime",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": true
+    },
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "Updated At",
+      "reference": "updated_at",
+      "type": "datetime",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": true
+    }
+  ],
+  "views": [],
+  "exports": [],
+  "backend": {
+    "read_all": {
+      "method": "GET",
+      "url": "{backend_host}/project_types",
+      "data": null,
+      "headers": null,
+      "cached": true,
+      "cacheDuration": "1h"
+    },
+    "read": {
+      "method": "GET",
+      "url": "{backend_host}/project_types/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "create": {
+      "method": "POST",
+      "url": "{backend_host}/project_types",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "update": {
+      "method": "PUT",
+      "url": "{backend_host}/project_types/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "{backend_host}/project_types/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    }
+  },
+  "pagination_option": {
+    "sort_by": "created_at",
+    "ascending": false
+  },
+  "layout_form": [
+    {
+      "id": "create",
+      "label": "New Project Type",
+      "type": "create",
+      "groups": [
+        {
+          "id": "grp_create_main",
+          "title": "Main Information",
+          "rows": [
+            {
+              "columns": 1,
+              "fields": [
+                "name",
+                "code",
+                "status_id"
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    },
+    {
+      "id": "update",
+      "label": "Edit Project Type",
+      "type": "update",
+      "groups": [
+        {
+          "id": "grp_update_main",
+          "title": "Project Type Details",
+          "rows": [
+            {
+              "columns": 1,
+              "fields": [
+                "id",
+                "name",
+                "code",
+                "status_id"
+              ]
+            },
+            {
+              "columns": 2,
+              "fields": [
+                "created_at",
+                "updated_at"
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    },
+    {
+      "id": "view",
+      "label": "Project Type Detail",
+      "type": "view",
+      "groups": [
+        {
+          "id": "grp_view_main",
+          "title": "Summary",
+          "rows": [
+            {
+              "columns": 2,
+              "fields": [
+                "name",
+                "code"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "status_id"
+              ]
+            },
+            {
+              "columns": 2,
+              "fields": [
+                "created_at",
+                "updated_at"
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    }
+  ],
+  "layout_list_tile": {
+    "title": "name",
+    "subtitle": "code",
+    "trailing": "id"
+  },
+  "layout_table": {
+    "code": 3,
+    "created_at": 3,
+    "id": 2,
+    "name": 5,
+    "status_id": 3,
+    "updated_at": 3
+  },
+  "actions": [],
+  "actions_home": [],
+  "bypass_all_permissions": true
+}

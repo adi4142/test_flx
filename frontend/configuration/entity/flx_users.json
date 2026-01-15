@@ -1,0 +1,368 @@
+{
+  "id": "flx_users",
+  "label": "User",
+  "description": "",
+  "fields": [
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "ID",
+      "reference": "id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 10.0,
+      "label": "Email",
+      "reference": "email",
+      "type": "text",
+      "auto_generated": null,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Email Verified",
+      "reference": "email_verified",
+      "type": "number",
+      "auto_generated": null,
+      "required": true,
+      "pattern": "^[0-9]+$",
+      "pattern_error": "Only numbers are allowed.",
+      "min_length": 1,
+      "max_length": 1,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Phone",
+      "reference": "phone",
+      "type": "text",
+      "auto_generated": null,
+      "required": true,
+      "pattern": "^[0-9]+$",
+      "pattern_error": "Only numbers are allowed.",
+      "min_length": 1,
+      "max_length": 15,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 10.0,
+      "label": "Password",
+      "reference": "password",
+      "type": "text",
+      "auto_generated": null,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 10.0,
+      "label": "Name",
+      "reference": "name",
+      "type": "text",
+      "auto_generated": null,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Enabled",
+      "reference": "enabled",
+      "type": "number",
+      "auto_generated": null,
+      "required": true,
+      "pattern": "^[0-9]+$",
+      "pattern_error": "Only numbers are allowed.",
+      "min_length": 1,
+      "max_length": 1,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 5.0,
+      "label": "Created At",
+      "reference": "created_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 5.0,
+      "label": "Updated At",
+      "reference": "updated_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 9.0,
+      "label": "Deleted At",
+      "reference": "deleted_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "Created By",
+      "reference": "created_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": false,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "Updated By",
+      "reference": "updated_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": false,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "Deleted By",
+      "reference": "deleted_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": false,
+      "is_copyable": null
+    }
+  ],
+  "views": [],
+  "exports": [],
+  "backend": {
+    "read_all": {
+      "method": "GET",
+      "url": "{backend_host}/flx_users",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "read": {
+      "method": "GET",
+      "url": "{backend_host}/flx_users/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "create": {
+      "method": "POST",
+      "url": "{backend_host}/flx_users",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "update": {
+      "method": "PUT",
+      "url": "{backend_host}/flx_users/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "{backend_host}/flx_users/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    }
+  },
+  "pagination_option": {
+    "sort_by": "created_at",
+    "ascending": false
+  },
+  "layout_form": [
+    {
+      "id": "create",
+      "label": "Create User",
+      "type": "create",
+      "groups": [
+        {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "title": "CREATE",
+          "rows": [
+            {
+              "columns": 1,
+              "fields": [
+                "email"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "phone"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "name"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "password"
+              ]
+            },
+            {
+              "columns": 2,
+              "fields": [
+                "email_verified",
+                "enabled"
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    },
+    {
+      "id": "update",
+      "label": "Update User",
+      "type": "update",
+      "groups": [
+        {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "title": "UPDATE",
+          "rows": [
+            {
+              "columns": 1,
+              "fields": [
+                "email"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "phone"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "name"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "password"
+              ]
+            },
+            {
+              "columns": 2,
+              "fields": [
+                "email_verified",
+                "enabled"
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    }
+  ],
+  "layout_list_tile": null,
+  "layout_table": {
+    "id": 10,
+    "name": 10,
+    "email": 10,
+    "phone": 10,
+    "created_at": 8,
+    "updated_at": 8,
+    "deleted_at": 8
+  },
+  "actions": [],
+  "actions_home": [],
+  "bypass_all_permissions": false
+}

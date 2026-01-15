@@ -1,0 +1,229 @@
+{
+  "id": "flx_roles",
+  "label": "Roles",
+  "description": "",
+  "fields": [
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "ID",
+      "reference": "id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": "backend.flx_users({id}:{name})",
+      "column_width": 3.0,
+      "label": "User ID",
+      "reference": "id_users",
+      "type": "number",
+      "auto_generated": null,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 10.0,
+      "label": "Endpoint",
+      "reference": "endpoint",
+      "type": "text",
+      "auto_generated": null,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Role",
+      "reference": "role",
+      "type": "permission",
+      "auto_generated": null,
+      "required": true,
+      "pattern": "^[0-9]+$",
+      "pattern_error": "Only numbers are allowed.",
+      "min_length": 1,
+      "max_length": 2,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 5.0,
+      "label": "Created At",
+      "reference": "created_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": 5.0,
+      "label": "Updated At",
+      "reference": "updated_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    }
+  ],
+  "views": [],
+  "exports": [],
+  "backend": {
+    "read_all": {
+      "method": "GET",
+      "url": "{backend_host}/flx_roles",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "read": {
+      "method": "GET",
+      "url": "{backend_host}/flx_roles/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "create": {
+      "method": "POST",
+      "url": "{backend_host}/flx_roles",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "update": {
+      "method": "PUT",
+      "url": "{backend_host}/flx_roles/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "{backend_host}/flx_roles/{id}",
+      "data": null,
+      "headers": null,
+      "cached": false,
+      "cacheDuration": null
+    }
+  },
+  "pagination_option": {
+    "sort_by": "created_at",
+    "ascending": false
+  },
+  "layout_form": [
+    {
+      "id": "create",
+      "label": "User Endpoint Role Form",
+      "type": "create",
+      "groups": [
+        {
+          "id": "11111111-1111-1111-1111-111111111111",
+          "title": "CREATE",
+          "rows": [
+            {
+              "columns": 1,
+              "fields": [
+                "id_users"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "endpoint"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "role"
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    },
+    {
+      "id": "update",
+      "label": "Update User Endpoint Role",
+      "type": "update",
+      "groups": [
+        {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "title": "UPDATE",
+          "rows": [
+            {
+              "columns": 1,
+              "fields": [
+                "id_users"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "endpoint"
+              ]
+            },
+            {
+              "columns": 1,
+              "fields": [
+                "role"
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    }
+  ],
+  "layout_list_tile": null,
+  "layout_table": {
+    "id": 4,
+    "id_users": 8,
+    "endpoint": 10,
+    "role": 32,
+    "created_at": 7,
+    "updated_at": 7
+  },
+  "actions": [],
+  "actions_home": [],
+  "bypass_all_permissions": false
+}

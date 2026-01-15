@@ -1,0 +1,64 @@
+{
+  "backend_host": "http://0.0.0.0:8080",
+  "app_name": "project",
+  "menu_group": [
+    {
+      "label": "Monitoring",
+      "menu": [
+        {
+          "label": "Roles",
+          "icon": "fa fa-money",
+          "menu_sub": [
+            {
+              "label": "Roles",
+              "entity": "flx_roles"
+            }
+          ]
+        },
+        {
+          "label": "Users",
+          "icon": "fa fa-money",
+          "menu_sub": [
+            {
+              "label": "Users",
+              "entity": "flx_users"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "company": {
+    "id": "dummy_id",
+    "name": "Dummy Company",
+    "phone": "+6281234567890",
+    "website": "https://dummy.com",
+    "address": "Jalan Dummy No. 123, Kota Dummy"
+  },
+  "theme": {
+    "color": "#2196F3",
+    "color_soft": "#BBDEFB"
+  },
+  "logo_url": "https://dummy.com/logo.png",
+  "logo_named_url": "https://dummy.com/logo_named.png",
+  "auth_url": "http://0.0.0.0:8080/login",
+  "preload": [],
+  "entity_registration": null,
+  "variables": [
+    {
+      "key": "auth_token",
+      "value": "",
+      "description": "Authentication token used for HTTP requests."
+    },
+    {
+      "key": "user_id",
+      "value": "",
+      "description": "The unique identifier of the currently logged-in user."
+    },
+    {
+      "key": "backend_host",
+      "value": "http://0.0.0.0:8080",
+      "description": "The host address of the backend server."
+    }
+  ]
+}
