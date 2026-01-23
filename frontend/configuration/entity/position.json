@@ -1,0 +1,238 @@
+{
+  "id": "position",
+  "label": "Position",
+  "description": "",
+  "fields": [
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "ID",
+      "reference": "id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Created At",
+      "reference": "created_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Updated At",
+      "reference": "updated_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Deleted At",
+      "reference": "deleted_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Created By",
+      "reference": "created_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Updated By",
+      "reference": "updated_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Deleted By",
+      "reference": "deleted_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Name",
+      "reference": "name",
+      "type": "varchar",
+      "auto_generated": false,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": 50,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Description",
+      "reference": "description",
+      "type": "text",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    }
+  ],
+  "views": [],
+  "exports": [],
+  "backend": {
+    "read_all": null,
+    "read": null,
+    "create": null,
+    "update": null,
+    "delete": null
+  },
+  "pagination_option": {
+    "sort_by": "created_at",
+    "ascending": false
+  },
+  "layout_form": [
+    {
+      "id": "add_position",
+      "label": "Add Position",
+      "type": "create",
+      "groups": [],
+      "components": [
+        {
+          "id": "text_field_1",
+          "type": "text_field",
+          "label": "Name",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
+        },
+        {
+          "id": "text_field_2",
+          "type": "text_field",
+          "label": "Description",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        }
+      ]
+    },
+    {
+      "id": "edit_position",
+      "label": "Edit Position",
+      "type": "update",
+      "groups": [],
+      "components": [
+        {
+          "id": "text_field_1",
+          "type": "text_field",
+          "label": "Name",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
+        },
+        {
+          "id": "text_field_2",
+          "type": "text_field",
+          "label": "Description",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        }
+      ]
+    }
+  ],
+  "layout_list_tile": null,
+  "layout_table": {
+    "name": 4,
+    "description": 4
+  },
+  "actions": [],
+  "actions_home": [],
+  "bypass_all_permissions": false
+}

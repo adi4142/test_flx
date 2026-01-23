@@ -1,0 +1,16 @@
+{
+  "name": "project",
+  "id": "test",
+  "description": "",
+  "tablesSuggestions": [
+    {
+      "name": "project_types",
+      "description": "Table project_types berfungsi menyimpan tipe proyek. Primary key: id (pk: true). Index pada kolom name."
+    }
+  ],
+  "createdAt": "2026-01-14T13:46:30.410",
+  "lastOpenedAt": "2026-01-23T09:23:05.075759",
+  "backendDirectoryPath": "C:\\Users\\USer\\Desktop\\test\\backend",
+  "frontendDirectoryPath": "C:\\Users\\USer\\Desktop\\test\\frontend",
+  "requireAuth": true
+}

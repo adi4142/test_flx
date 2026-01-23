@@ -1,0 +1,315 @@
+{
+  "id": "division_id",
+  "label": "Division",
+  "description": "",
+  "fields": [
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "ID",
+      "reference": "id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Created At",
+      "reference": "created_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Updated At",
+      "reference": "updated_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Deleted At",
+      "reference": "deleted_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Created By",
+      "reference": "created_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Updated By",
+      "reference": "updated_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Deleted By",
+      "reference": "deleted_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Name",
+      "reference": "name",
+      "type": "varchar",
+      "auto_generated": false,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": 100,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Description",
+      "reference": "description",
+      "type": "text",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": 255,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    }
+  ],
+  "views": [],
+  "exports": [],
+  "backend": {
+    "read_all": null,
+    "read": null,
+    "create": null,
+    "update": null,
+    "delete": null
+  },
+  "pagination_option": {
+    "sort_by": "created_at",
+    "ascending": false
+  },
+  "layout_form": [
+    {
+      "id": "edit_division",
+      "label": "Edit Division",
+      "type": "update",
+      "groups": [],
+      "components": [
+        {
+          "id": "text_1",
+          "type": "text",
+          "value": "Edit Division"
+        },
+        {
+          "id": "name",
+          "type": "text_field",
+          "label": "Name",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
+        },
+        {
+          "id": "description",
+          "type": "text_field",
+          "label": "Description",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        }
+      ],
+      "submit_workflow": {
+        "type": "workflow",
+        "lock_ui_while_submitting": false,
+        "actions": [
+          {
+            "type": "validate",
+            "scope": "all"
+          },
+          {
+            "type": "http",
+            "name": "post",
+            "http": {
+              "method": "GET",
+              "url": "",
+              "headers": {},
+              "body": {
+                "name": "{{form.name}}",
+                "description": "{{form.description}}"
+              },
+              "use_form_data": false
+            }
+          }
+        ],
+        "on_success": [
+          {
+            "type": "toast",
+            "variant": "success",
+            "message": "data berhasil disimpan"
+          }
+        ],
+        "on_error": [
+          {
+            "type": "toast",
+            "variant": "error",
+            "message": "erorrrrr!!!"
+          }
+        ]
+      }
+    },
+    {
+      "id": "add_division",
+      "label": "Add Division",
+      "type": "create",
+      "groups": [],
+      "components": [
+        {
+          "id": "text_2",
+          "type": "text",
+          "value": "Add Division"
+        },
+        {
+          "id": "text_field_4",
+          "type": "text_field",
+          "label": "Name",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
+        },
+        {
+          "id": "text_field_3",
+          "type": "text_field",
+          "label": "Description",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        }
+      ]
+    }
+  ],
+  "layout_list_tile": null,
+  "layout_table": {
+    "id": 4,
+    "name": 2,
+    "description": 2
+  },
+  "actions": [],
+  "actions_home": [
+    {
+      "id": "create",
+      "type": "open_page",
+      "name": "Add Divsion",
+      "on_success": "toast",
+      "on_failure": "toast",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "add_division",
+      "icon": "Add",
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {
+          "name": "",
+          "description": ""
+        },
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    }
+  ],
+  "bypass_all_permissions": false
+}

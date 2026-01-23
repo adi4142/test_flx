@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "departements",
+    "flx_roles",
+    "flx_users"
+  ],
+  "route_publics": [
+    "departements",
+    "flx_roles",
+    "flx_users"
+  ]
+}

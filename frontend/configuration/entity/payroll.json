@@ -1,0 +1,263 @@
+{
+  "id": "payroll",
+  "label": "Payroll",
+  "description": "",
+  "fields": [
+    {
+      "options_source": null,
+      "column_width": 3.0,
+      "label": "ID",
+      "reference": "id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Created At",
+      "reference": "created_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Updated At",
+      "reference": "updated_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Deleted At",
+      "reference": "deleted_at",
+      "type": "datetime(yyyy-MM-dd HH:mm:ss)",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Created By",
+      "reference": "created_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Updated By",
+      "reference": "updated_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Deleted By",
+      "reference": "deleted_by_id",
+      "type": "number",
+      "auto_generated": true,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": null,
+      "allow_update": null,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Period Month",
+      "reference": "period_month",
+      "type": "int",
+      "auto_generated": false,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Period Year",
+      "reference": "period_year",
+      "type": "year",
+      "auto_generated": false,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Status",
+      "reference": "status",
+      "type": "enum",
+      "auto_generated": false,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    }
+  ],
+  "views": [],
+  "exports": [],
+  "backend": {
+    "read_all": null,
+    "read": null,
+    "create": null,
+    "update": null,
+    "delete": null
+  },
+  "pagination_option": {
+    "sort_by": "created_at",
+    "ascending": false
+  },
+  "layout_form": [
+    {
+      "id": "add_payroll",
+      "label": "Add Payroll",
+      "type": "create",
+      "groups": [],
+      "components": [
+        {
+          "id": "number_field_1",
+          "type": "number_field",
+          "label": "Period Month",
+          "initialValue": "",
+          "enabled": true
+        },
+        {
+          "id": "number_field_2",
+          "type": "number_field",
+          "label": "Period Year",
+          "initialValue": "",
+          "enabled": true
+        },
+        {
+          "id": "dropdown_1",
+          "type": "dropdown",
+          "label": "Status",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "initialValue": "",
+          "httpData": null,
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
+        }
+      ]
+    },
+    {
+      "id": "Edit_Payroll",
+      "label": "Edit Payroll",
+      "type": "update",
+      "groups": [],
+      "components": [
+        {
+          "id": "number_field_1",
+          "type": "number_field",
+          "label": "Period Month",
+          "initialValue": "",
+          "enabled": true
+        },
+        {
+          "id": "number_field_2",
+          "type": "number_field",
+          "label": "Period Year",
+          "initialValue": "",
+          "enabled": true
+        },
+        {
+          "id": "dropdown_1",
+          "type": "dropdown",
+          "label": "Status",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "initialValue": "",
+          "httpData": null,
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
+        }
+      ]
+    }
+  ],
+  "layout_list_tile": null,
+  "layout_table": {},
+  "actions": [],
+  "actions_home": [],
+  "bypass_all_permissions": false
+}
