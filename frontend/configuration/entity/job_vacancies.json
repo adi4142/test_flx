@@ -114,6 +114,102 @@
       "allow_create": null,
       "allow_update": null,
       "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Title",
+      "reference": "title",
+      "type": "text",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "departements_id",
+      "reference": "departement_id",
+      "type": "varchar",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "position_id",
+      "reference": "position_id",
+      "type": "varchar",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Description",
+      "reference": "description",
+      "type": "text",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Requirements",
+      "reference": "requirements",
+      "type": "text",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Status",
+      "reference": "status",
+      "type": "enum(Available, Unavailable)",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
     }
   ],
   "views": [],
@@ -129,10 +225,242 @@
     "sort_by": "created_at",
     "ascending": false
   },
-  "layout_form": [],
+  "layout_form": [
+    {
+      "id": "edit_job_vacancies",
+      "label": "Edit Job Vacancies",
+      "type": "update",
+      "groups": [],
+      "components": [
+        {
+          "id": "text_field_18",
+          "type": "text_field",
+          "label": "Title",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "dropdown_4",
+          "type": "dropdown",
+          "label": "Select Position",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "initialValue": "",
+          "httpData": null,
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
+        },
+        {
+          "id": "dropdown_5",
+          "type": "dropdown",
+          "label": "Select Departement",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "initialValue": "",
+          "httpData": null,
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
+        },
+        {
+          "id": "text_field_21",
+          "type": "text_field",
+          "label": "Description",
+          "maxLength": 100,
+          "maxLines": 5,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "text_field_21",
+          "type": "text_field",
+          "label": "Requirements",
+          "maxLength": 100,
+          "maxLines": 5,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "radio_3",
+          "type": "radio",
+          "label": "Status",
+          "options": [
+            "Available",
+            "Unavailable"
+          ],
+          "initialValue": "",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "add_job_vacancies",
+      "label": "Add Job Vacancies",
+      "type": "create",
+      "groups": [],
+      "components": [
+        {
+          "id": "text_field_18",
+          "type": "text_field",
+          "label": "Title",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "dropdown_4",
+          "type": "dropdown",
+          "label": "Select Position",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "initialValue": "",
+          "httpData": null,
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
+        },
+        {
+          "id": "dropdown_5",
+          "type": "dropdown",
+          "label": "Select Departement",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
+          "initialValue": "",
+          "httpData": null,
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
+        },
+        {
+          "id": "text_field_21",
+          "type": "text_field",
+          "label": "Description",
+          "maxLength": 100,
+          "maxLines": 5,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "text_field_21",
+          "type": "text_field",
+          "label": "Requirements",
+          "maxLength": 100,
+          "maxLines": 5,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "radio_3",
+          "type": "radio",
+          "label": "Status",
+          "options": [
+            "Available",
+            "Unavailable"
+          ],
+          "initialValue": "",
+          "required": false
+        }
+      ]
+    }
+  ],
   "layout_list_tile": null,
-  "layout_table": {},
+  "layout_table": {
+    "id": 4,
+    "title": 4,
+    "departement_id": 4,
+    "position_id": 4,
+    "description": 4,
+    "requirements": 4,
+    "status": 4
+  },
   "actions": [],
-  "actions_home": [],
+  "actions_home": [
+    {
+      "id": "create",
+      "type": "open_page",
+      "name": "Job Vacancies",
+      "on_success": "refresh",
+      "on_failure": "navigate_back",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "add_job_vacancies",
+      "icon": "Add",
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    },
+    {
+      "id": "update",
+      "type": "open_page",
+      "name": "Edit Job Vacancies",
+      "on_success": "refresh",
+      "on_failure": "navigate_back",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "edit_job_vacancies",
+      "icon": null,
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    }
+  ],
   "bypass_all_permissions": false
 }

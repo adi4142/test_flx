@@ -280,7 +280,7 @@
       "column_width": null,
       "label": "Gender",
       "reference": "gender",
-      "type": "enum",
+      "type": "enum(Male, Female)",
       "auto_generated": false,
       "required": true,
       "pattern": null,

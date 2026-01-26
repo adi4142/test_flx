@@ -194,6 +194,38 @@
       "allow_create": true,
       "allow_update": true,
       "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Gender",
+      "reference": "gender",
+      "type": "enum(Male, Female)",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Date Of Birth",
+      "reference": "date_of_birth",
+      "type": "date",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
     }
   ],
   "views": [],
@@ -395,6 +427,8 @@
     "email": 4,
     "phone": 4,
     "address": 4,
+    "date_of_birth": 4,
+    "gender": 4,
     "CV": 4
   },
   "actions": [],
