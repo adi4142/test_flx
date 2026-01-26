@@ -253,11 +253,101 @@
           "dependsOn": []
         }
       ]
+    },
+    {
+      "id": "payroll",
+      "label": "Payroll",
+      "type": "view",
+      "groups": [],
+      "components": [
+        {
+          "id": "table_10",
+          "type": "table",
+          "http": {
+            "method": "GET",
+            "url": "",
+            "headers": {},
+            "body": {},
+            "use_form_data": false
+          },
+          "width": 1000.0,
+          "columns": [
+            {
+              "header": "New Column",
+              "body": "",
+              "width": null
+            },
+            {
+              "header": "New Column",
+              "body": "",
+              "width": null
+            },
+            {
+              "header": "New Column",
+              "body": "",
+              "width": null
+            }
+          ]
+        }
+      ]
     }
   ],
   "layout_list_tile": null,
-  "layout_table": {},
+  "layout_table": {
+    "period_month": 8,
+    "period_year": 1,
+    "status": 2
+  },
   "actions": [],
-  "actions_home": [],
+  "actions_home": [
+    {
+      "id": "create",
+      "type": "open_page",
+      "name": "Payroll",
+      "on_success": "toast",
+      "on_failure": "toast",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "add_payroll",
+      "icon": "Add",
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    },
+    {
+      "id": "update",
+      "type": "open_page",
+      "name": "Edit Payroll",
+      "on_success": "refresh",
+      "on_failure": "navigate_back",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "Edit_Payroll",
+      "icon": null,
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    }
+  ],
   "bypass_all_permissions": false
 }

@@ -1,6 +1,6 @@
 {
-  "id": "selection",
-  "label": "Selection",
+  "id": "user",
+  "label": "User",
   "description": "",
   "fields": [
     {
@@ -122,11 +122,11 @@
       "reference": "name",
       "type": "varchar",
       "auto_generated": false,
-      "required": true,
+      "required": false,
       "pattern": null,
       "pattern_error": null,
       "min_length": null,
-      "max_length": 255,
+      "max_length": null,
       "allow_create": true,
       "allow_update": true,
       "is_copyable": null
@@ -134,8 +134,56 @@
     {
       "options_source": null,
       "column_width": null,
-      "label": "Description",
-      "reference": "description",
+      "label": "Email",
+      "reference": "email",
+      "type": "email",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Phone",
+      "reference": "phone",
+      "type": "varchar",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Password",
+      "reference": "password",
+      "type": "varchar",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "fdf",
+      "reference": "fdfdf",
       "type": "text",
       "auto_generated": false,
       "required": false,
@@ -150,9 +198,9 @@
     {
       "options_source": null,
       "column_width": null,
-      "label": "Order",
-      "reference": "order",
-      "type": "int",
+      "label": "Photo",
+      "reference": "photo",
+      "type": "image",
       "auto_generated": false,
       "required": false,
       "pattern": null,
@@ -179,13 +227,13 @@
   },
   "layout_form": [
     {
-      "id": "add_selection",
-      "label": "Add Selection",
+      "id": "add_user",
+      "label": "Add User",
       "type": "create",
       "groups": [],
       "components": [
         {
-          "id": "text_field_1",
+          "id": "text_field_6",
           "type": "text_field",
           "label": "Name",
           "maxLength": 50,
@@ -197,21 +245,45 @@
           "events": {}
         },
         {
-          "id": "text_field_2",
+          "id": "text_field_7",
           "type": "text_field",
-          "label": "Description",
+          "label": "Email",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
           "hintText": "",
           "enabled": true,
-          "required": false,
+          "required": true,
           "events": {}
         },
         {
-          "id": "text_field_3",
+          "id": "text_field_8",
           "type": "text_field",
-          "label": "Order",
+          "label": "Phone",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
+        },
+        {
+          "id": "text_field_9",
+          "type": "text_field",
+          "label": "Password",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
+        },
+        {
+          "id": "text_field_10",
+          "type": "text_field",
+          "label": "Photo",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
@@ -223,13 +295,13 @@
       ]
     },
     {
-      "id": "edit_selection",
-      "label": "Edit Selection",
+      "id": "edit_user",
+      "label": "Edit User",
       "type": "update",
       "groups": [],
       "components": [
         {
-          "id": "text_field_1",
+          "id": "text_field_6",
           "type": "text_field",
           "label": "Name",
           "maxLength": 50,
@@ -241,21 +313,9 @@
           "events": {}
         },
         {
-          "id": "text_field_2",
+          "id": "text_field_7",
           "type": "text_field",
-          "label": "Description",
-          "maxLength": 50,
-          "maxLines": 1,
-          "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": false,
-          "events": {}
-        },
-        {
-          "id": "text_field_3",
-          "type": "text_field",
-          "label": "Order",
+          "label": "Email",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
@@ -263,65 +323,66 @@
           "enabled": true,
           "required": true,
           "events": {}
-        }
-      ]
-    },
-    {
-      "id": "selection",
-      "label": "Selection",
-      "type": "view",
-      "groups": [],
-      "components": [
+        },
         {
-          "id": "selection",
-          "type": "table",
-          "http": {
-            "method": "GET",
-            "url": "",
-            "headers": {},
-            "body": {},
-            "use_form_data": false
-          },
-          "width": 1000.0,
-          "columns": [
-            {
-              "header": "Name",
-              "body": "",
-              "width": null
-            },
-            {
-              "header": "Description",
-              "body": "",
-              "width": null
-            },
-            {
-              "header": "Order",
-              "body": "",
-              "width": null
-            }
-          ]
+          "id": "text_field_8",
+          "type": "text_field",
+          "label": "Phone",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
+        },
+        {
+          "id": "text_field_9",
+          "type": "text_field",
+          "label": "Password",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
+        },
+        {
+          "id": "text_field_10",
+          "type": "text_field",
+          "label": "Photo",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": true,
+          "events": {}
         }
       ]
     }
   ],
   "layout_list_tile": null,
   "layout_table": {
-    "name": 9,
-    "description": 2,
-    "order": 2
+    "name": 4,
+    "phone": 4,
+    "email": 4,
+    "password": 4,
+    "photo": 4
   },
   "actions": [],
   "actions_home": [
     {
-      "id": "create",
+      "id": "update",
       "type": "open_page",
-      "name": "Selection",
+      "name": "Edit User",
       "on_success": "refresh",
       "on_failure": "navigate_back",
       "is_multiple": false,
       "reference": null,
-      "layout_form_id": "add_selection",
-      "icon": "Add",
+      "layout_form_id": "add_user",
+      "icon": "Edit",
       "icon_code": null,
       "http": {
         "method": "GET",
@@ -337,15 +398,15 @@
       "permission": null
     },
     {
-      "id": "update",
+      "id": "create",
       "type": "open_page",
-      "name": "edit Selection",
+      "name": "User",
       "on_success": "refresh",
       "on_failure": "navigate_back",
       "is_multiple": false,
       "reference": null,
-      "layout_form_id": "edit_selection",
-      "icon": "Edit",
+      "layout_form_id": "add_user",
+      "icon": "Add",
       "icon_code": null,
       "http": {
         "method": "GET",

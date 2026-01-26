@@ -1,6 +1,6 @@
 {
-  "id": "selection",
-  "label": "Selection",
+  "id": "job_aplicants",
+  "label": "Job Aplicants",
   "description": "",
   "fields": [
     {
@@ -126,7 +126,7 @@
       "pattern": null,
       "pattern_error": null,
       "min_length": null,
-      "max_length": 255,
+      "max_length": null,
       "allow_create": true,
       "allow_update": true,
       "is_copyable": null
@@ -134,8 +134,40 @@
     {
       "options_source": null,
       "column_width": null,
-      "label": "Description",
-      "reference": "description",
+      "label": "Email",
+      "reference": "email",
+      "type": "email",
+      "auto_generated": false,
+      "required": true,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "Phone",
+      "reference": "phone",
+      "type": "varchar",
+      "auto_generated": false,
+      "required": false,
+      "pattern": null,
+      "pattern_error": null,
+      "min_length": null,
+      "max_length": null,
+      "allow_create": true,
+      "allow_update": true,
+      "is_copyable": null
+    },
+    {
+      "options_source": null,
+      "column_width": null,
+      "label": "CV",
+      "reference": "CV",
       "type": "text",
       "auto_generated": false,
       "required": false,
@@ -150,9 +182,9 @@
     {
       "options_source": null,
       "column_width": null,
-      "label": "Order",
-      "reference": "order",
-      "type": "int",
+      "label": "Address",
+      "reference": "address",
+      "type": "text",
       "auto_generated": false,
       "required": false,
       "pattern": null,
@@ -179,27 +211,15 @@
   },
   "layout_form": [
     {
-      "id": "add_selection",
-      "label": "Add Selection",
+      "id": "add_job_aplicant",
+      "label": "Add Job Aplicant",
       "type": "create",
       "groups": [],
       "components": [
         {
-          "id": "text_field_1",
+          "id": "text_field_11",
           "type": "text_field",
           "label": "Name",
-          "maxLength": 50,
-          "maxLines": 1,
-          "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
-        },
-        {
-          "id": "text_field_2",
-          "type": "text_field",
-          "label": "Description",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
@@ -209,41 +229,86 @@
           "events": {}
         },
         {
-          "id": "text_field_3",
+          "id": "text_field_12",
           "type": "text_field",
-          "label": "Order",
+          "label": "Email",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
           "hintText": "",
           "enabled": true,
-          "required": true,
+          "required": false,
           "events": {}
+        },
+        {
+          "id": "text_field_13",
+          "type": "text_field",
+          "label": "Phone",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "text_field_14",
+          "type": "text_field",
+          "label": "Adress",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "text_field_15",
+          "type": "text_field",
+          "label": "CV",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "date_picker_2",
+          "type": "date_picker",
+          "label": "Date Of Birth",
+          "initialValue": "",
+          "minDate": null,
+          "maxDate": null,
+          "required": false,
+          "dateFormat": "dd-MM-yyyy"
+        },
+        {
+          "id": "radio_2",
+          "type": "radio",
+          "label": "Gender",
+          "options": [
+            "Male",
+            "Female"
+          ],
+          "initialValue": "",
+          "required": false
         }
       ]
     },
     {
-      "id": "edit_selection",
-      "label": "Edit Selection",
+      "id": "edit job aplicant",
+      "label": "Edit Job Aplicant",
       "type": "update",
       "groups": [],
       "components": [
         {
-          "id": "text_field_1",
+          "id": "text_field_11",
           "type": "text_field",
           "label": "Name",
-          "maxLength": 50,
-          "maxLines": 1,
-          "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
-        },
-        {
-          "id": "text_field_2",
-          "type": "text_field",
-          "label": "Description",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
@@ -253,113 +318,86 @@
           "events": {}
         },
         {
-          "id": "text_field_3",
+          "id": "text_field_12",
           "type": "text_field",
-          "label": "Order",
+          "label": "Email",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
           "hintText": "",
           "enabled": true,
-          "required": true,
+          "required": false,
           "events": {}
-        }
-      ]
-    },
-    {
-      "id": "selection",
-      "label": "Selection",
-      "type": "view",
-      "groups": [],
-      "components": [
+        },
         {
-          "id": "selection",
-          "type": "table",
-          "http": {
-            "method": "GET",
-            "url": "",
-            "headers": {},
-            "body": {},
-            "use_form_data": false
-          },
-          "width": 1000.0,
-          "columns": [
-            {
-              "header": "Name",
-              "body": "",
-              "width": null
-            },
-            {
-              "header": "Description",
-              "body": "",
-              "width": null
-            },
-            {
-              "header": "Order",
-              "body": "",
-              "width": null
-            }
-          ]
+          "id": "text_field_13",
+          "type": "text_field",
+          "label": "Phone",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "text_field_14",
+          "type": "text_field",
+          "label": "Adress",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "text_field_15",
+          "type": "text_field",
+          "label": "CV",
+          "maxLength": 50,
+          "maxLines": 1,
+          "initialValue": "",
+          "hintText": "",
+          "enabled": true,
+          "required": false,
+          "events": {}
+        },
+        {
+          "id": "date_picker_2",
+          "type": "date_picker",
+          "label": "Date Of Birth",
+          "initialValue": "",
+          "minDate": null,
+          "maxDate": null,
+          "required": false,
+          "dateFormat": "dd-MM-yyyy"
+        },
+        {
+          "id": "radio_2",
+          "type": "radio",
+          "label": "Gender",
+          "options": [
+            "Male",
+            "Female"
+          ],
+          "initialValue": "",
+          "required": false
         }
       ]
     }
   ],
   "layout_list_tile": null,
   "layout_table": {
-    "name": 9,
-    "description": 2,
-    "order": 2
+    "name": 4,
+    "email": 4,
+    "phone": 4,
+    "address": 4,
+    "CV": 4
   },
   "actions": [],
-  "actions_home": [
-    {
-      "id": "create",
-      "type": "open_page",
-      "name": "Selection",
-      "on_success": "refresh",
-      "on_failure": "navigate_back",
-      "is_multiple": false,
-      "reference": null,
-      "layout_form_id": "add_selection",
-      "icon": "Add",
-      "icon_code": null,
-      "http": {
-        "method": "GET",
-        "url": "",
-        "headers": {},
-        "body": {},
-        "use_form_data": false
-      },
-      "width": 400.0,
-      "confirm_title": "Confirmation",
-      "confirm_message": "Are you sure you want to proceed?",
-      "icon_color": "#2196F3",
-      "permission": null
-    },
-    {
-      "id": "update",
-      "type": "open_page",
-      "name": "edit Selection",
-      "on_success": "refresh",
-      "on_failure": "navigate_back",
-      "is_multiple": false,
-      "reference": null,
-      "layout_form_id": "edit_selection",
-      "icon": "Edit",
-      "icon_code": null,
-      "http": {
-        "method": "GET",
-        "url": "",
-        "headers": {},
-        "body": {},
-        "use_form_data": false
-      },
-      "width": 400.0,
-      "confirm_title": "Confirmation",
-      "confirm_message": "Are you sure you want to proceed?",
-      "icon_color": "#2196F3",
-      "permission": null
-    }
-  ],
+  "actions_home": [],
   "bypass_all_permissions": false
 }

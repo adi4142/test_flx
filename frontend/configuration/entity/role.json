@@ -1,6 +1,6 @@
 {
-  "id": "selection",
-  "label": "Selection",
+  "id": "role",
+  "label": "Role",
   "description": "",
   "fields": [
     {
@@ -118,15 +118,15 @@
     {
       "options_source": null,
       "column_width": null,
-      "label": "Name",
+      "label": "Name ",
       "reference": "name",
       "type": "varchar",
       "auto_generated": false,
       "required": true,
       "pattern": null,
       "pattern_error": null,
-      "min_length": null,
-      "max_length": 255,
+      "min_length": 3,
+      "max_length": null,
       "allow_create": true,
       "allow_update": true,
       "is_copyable": null
@@ -141,23 +141,7 @@
       "required": false,
       "pattern": null,
       "pattern_error": null,
-      "min_length": null,
-      "max_length": null,
-      "allow_create": true,
-      "allow_update": true,
-      "is_copyable": null
-    },
-    {
-      "options_source": null,
-      "column_width": null,
-      "label": "Order",
-      "reference": "order",
-      "type": "int",
-      "auto_generated": false,
-      "required": false,
-      "pattern": null,
-      "pattern_error": null,
-      "min_length": null,
+      "min_length": 5,
       "max_length": null,
       "allow_create": true,
       "allow_update": true,
@@ -179,13 +163,13 @@
   },
   "layout_form": [
     {
-      "id": "add_selection",
-      "label": "Add Selection",
+      "id": "add role",
+      "label": "Add Role",
       "type": "create",
       "groups": [],
       "components": [
         {
-          "id": "text_field_1",
+          "id": "text_field_4",
           "type": "text_field",
           "label": "Name",
           "maxLength": 50,
@@ -197,7 +181,7 @@
           "events": {}
         },
         {
-          "id": "text_field_2",
+          "id": "text_field_5",
           "type": "text_field",
           "label": "Description",
           "maxLength": 50,
@@ -207,29 +191,17 @@
           "enabled": true,
           "required": false,
           "events": {}
-        },
-        {
-          "id": "text_field_3",
-          "type": "text_field",
-          "label": "Order",
-          "maxLength": 50,
-          "maxLines": 1,
-          "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
         }
       ]
     },
     {
-      "id": "edit_selection",
-      "label": "Edit Selection",
+      "id": "edit_role",
+      "label": "Edit Role (Copy)",
       "type": "update",
       "groups": [],
       "components": [
         {
-          "id": "text_field_1",
+          "id": "text_field_4",
           "type": "text_field",
           "label": "Name",
           "maxLength": 50,
@@ -241,7 +213,7 @@
           "events": {}
         },
         {
-          "id": "text_field_2",
+          "id": "text_field_5",
           "type": "text_field",
           "label": "Description",
           "maxLength": 50,
@@ -251,115 +223,16 @@
           "enabled": true,
           "required": false,
           "events": {}
-        },
-        {
-          "id": "text_field_3",
-          "type": "text_field",
-          "label": "Order",
-          "maxLength": 50,
-          "maxLines": 1,
-          "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
-        }
-      ]
-    },
-    {
-      "id": "selection",
-      "label": "Selection",
-      "type": "view",
-      "groups": [],
-      "components": [
-        {
-          "id": "selection",
-          "type": "table",
-          "http": {
-            "method": "GET",
-            "url": "",
-            "headers": {},
-            "body": {},
-            "use_form_data": false
-          },
-          "width": 1000.0,
-          "columns": [
-            {
-              "header": "Name",
-              "body": "",
-              "width": null
-            },
-            {
-              "header": "Description",
-              "body": "",
-              "width": null
-            },
-            {
-              "header": "Order",
-              "body": "",
-              "width": null
-            }
-          ]
         }
       ]
     }
   ],
   "layout_list_tile": null,
   "layout_table": {
-    "name": 9,
-    "description": 2,
-    "order": 2
+    "name": 4,
+    "description": 4
   },
   "actions": [],
-  "actions_home": [
-    {
-      "id": "create",
-      "type": "open_page",
-      "name": "Selection",
-      "on_success": "refresh",
-      "on_failure": "navigate_back",
-      "is_multiple": false,
-      "reference": null,
-      "layout_form_id": "add_selection",
-      "icon": "Add",
-      "icon_code": null,
-      "http": {
-        "method": "GET",
-        "url": "",
-        "headers": {},
-        "body": {},
-        "use_form_data": false
-      },
-      "width": 400.0,
-      "confirm_title": "Confirmation",
-      "confirm_message": "Are you sure you want to proceed?",
-      "icon_color": "#2196F3",
-      "permission": null
-    },
-    {
-      "id": "update",
-      "type": "open_page",
-      "name": "edit Selection",
-      "on_success": "refresh",
-      "on_failure": "navigate_back",
-      "is_multiple": false,
-      "reference": null,
-      "layout_form_id": "edit_selection",
-      "icon": "Edit",
-      "icon_code": null,
-      "http": {
-        "method": "GET",
-        "url": "",
-        "headers": {},
-        "body": {},
-        "use_form_data": false
-      },
-      "width": 400.0,
-      "confirm_title": "Confirmation",
-      "confirm_message": "Are you sure you want to proceed?",
-      "icon_color": "#2196F3",
-      "permission": null
-    }
-  ],
+  "actions_home": [],
   "bypass_all_permissions": false
 }

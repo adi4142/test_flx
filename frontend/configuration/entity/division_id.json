@@ -169,11 +169,6 @@
       "groups": [],
       "components": [
         {
-          "id": "text_1",
-          "type": "text",
-          "value": "Edit Division"
-        },
-        {
           "id": "name",
           "type": "text_field",
           "label": "Name",
@@ -189,8 +184,8 @@
           "id": "description",
           "type": "text_field",
           "label": "Description",
-          "maxLength": 50,
-          "maxLines": 1,
+          "maxLength": 100,
+          "maxLines": 5,
           "initialValue": "",
           "hintText": "",
           "enabled": true,
@@ -238,18 +233,51 @@
       }
     },
     {
-      "id": "add_division",
-      "label": "Add Division",
+      "id": "view_division",
+      "label": "Table Division",
+      "type": "view",
+      "groups": [
+        {
+          "id": "afc03f09-9ad3-46dc-af62-3e59ecc32a20",
+          "title": "New Group",
+          "rows": []
+        }
+      ],
+      "components": [
+        {
+          "id": "table_division",
+          "type": "table",
+          "http": {
+            "method": "GET",
+            "url": "",
+            "headers": {},
+            "body": {},
+            "use_form_data": false
+          },
+          "width": 1000.0,
+          "columns": [
+            {
+              "header": "Name",
+              "body": "",
+              "width": null
+            },
+            {
+              "header": "Description",
+              "body": "",
+              "width": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "add_divison",
+      "label": "Add Divison",
       "type": "create",
       "groups": [],
       "components": [
         {
-          "id": "text_2",
-          "type": "text",
-          "value": "Add Division"
-        },
-        {
-          "id": "text_field_4",
+          "id": "name",
           "type": "text_field",
           "label": "Name",
           "maxLength": 50,
@@ -261,18 +289,56 @@
           "events": {}
         },
         {
-          "id": "text_field_3",
+          "id": "description",
           "type": "text_field",
           "label": "Description",
-          "maxLength": 50,
-          "maxLines": 1,
+          "maxLength": 100,
+          "maxLines": 5,
           "initialValue": "",
           "hintText": "",
           "enabled": true,
           "required": false,
           "events": {}
         }
-      ]
+      ],
+      "submit_workflow": {
+        "type": "workflow",
+        "lock_ui_while_submitting": false,
+        "actions": [
+          {
+            "type": "validate",
+            "scope": "all"
+          },
+          {
+            "type": "http",
+            "name": "post",
+            "http": {
+              "method": "GET",
+              "url": "",
+              "headers": {},
+              "body": {
+                "name": "{{form.name}}",
+                "description": "{{form.description}}"
+              },
+              "use_form_data": false
+            }
+          }
+        ],
+        "on_success": [
+          {
+            "type": "toast",
+            "variant": "success",
+            "message": "data berhasil disimpan"
+          }
+        ],
+        "on_error": [
+          {
+            "type": "toast",
+            "variant": "error",
+            "message": "erorrrrr!!!"
+          }
+        ]
+      }
     }
   ],
   "layout_list_tile": null,
@@ -284,14 +350,38 @@
   "actions": [],
   "actions_home": [
     {
+      "id": "update",
+      "type": "open_page",
+      "name": "Edit Division",
+      "on_success": "refresh",
+      "on_failure": "navigate_back",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "edit_division",
+      "icon": "Edit",
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    },
+    {
       "id": "create",
       "type": "open_page",
-      "name": "Add Divsion",
+      "name": "Divsion",
       "on_success": "toast",
       "on_failure": "toast",
       "is_multiple": false,
       "reference": null,
-      "layout_form_id": "add_division",
+      "layout_form_id": "add_divison",
       "icon": "Add",
       "icon_code": null,
       "http": {

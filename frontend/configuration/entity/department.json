@@ -225,6 +225,38 @@
           "events": {}
         }
       ]
+    },
+    {
+      "id": "view_departements",
+      "label": "Table Departements",
+      "type": "view",
+      "groups": [],
+      "components": [
+        {
+          "id": "table_departement",
+          "type": "table",
+          "http": {
+            "method": "GET",
+            "url": "",
+            "headers": {},
+            "body": {},
+            "use_form_data": false
+          },
+          "width": 1000.0,
+          "columns": [
+            {
+              "header": "Name",
+              "body": "name",
+              "width": 3.0
+            },
+            {
+              "header": "Description",
+              "body": "description",
+              "width": 3.0
+            }
+          ]
+        }
+      ]
     }
   ],
   "layout_list_tile": null,
@@ -234,6 +266,55 @@
     "description": 2
   },
   "actions": [],
-  "actions_home": [],
+  "actions_home": [
+    {
+      "id": "update",
+      "type": "open_page",
+      "name": "Edit Departmement",
+      "on_success": "refresh",
+      "on_failure": "navigate_back",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "edit_department",
+      "icon": "Edit",
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    },
+    {
+      "id": "create",
+      "type": "open_page",
+      "name": "Departement",
+      "on_success": "refresh",
+      "on_failure": "show_error_dialog",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "add_department",
+      "icon": "Add",
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    }
+  ],
   "bypass_all_permissions": false
 }

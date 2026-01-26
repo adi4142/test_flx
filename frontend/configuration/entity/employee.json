@@ -361,52 +361,64 @@
           "events": {}
         },
         {
-          "id": "text_field_11",
-          "type": "text_field",
-          "label": "Phone",
-          "maxLength": 50,
-          "maxLines": 1,
+          "id": "dropdown_1",
+          "type": "dropdown",
+          "label": "Select Departement",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
           "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
+          "httpData": {
+            "method": "GET",
+            "url": "",
+            "headers": {},
+            "body": {},
+            "use_form_data": false
+          },
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
         },
         {
-          "id": "text_field_12",
-          "type": "text_field",
-          "label": "Departement",
-          "maxLength": 50,
-          "maxLines": 1,
+          "id": "dropdown_2",
+          "type": "dropdown",
+          "label": "Select Division",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
           "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
+          "httpData": {
+            "method": "GET",
+            "url": "",
+            "headers": {},
+            "body": {},
+            "use_form_data": false
+          },
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
         },
         {
-          "id": "text_field_13",
-          "type": "text_field",
-          "label": "Division",
-          "maxLength": 50,
-          "maxLines": 1,
+          "id": "dropdown_3",
+          "type": "dropdown",
+          "label": "Select Position",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
           "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
-        },
-        {
-          "id": "text_field_14",
-          "type": "text_field",
-          "label": "Position",
-          "maxLength": 50,
-          "maxLines": 1,
-          "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
+          "httpData": null,
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
         },
         {
           "id": "text_field_15",
@@ -421,9 +433,9 @@
           "events": {}
         },
         {
-          "id": "text_field_16",
+          "id": "text_field_11",
           "type": "text_field",
-          "label": "Date  Of Birth",
+          "label": "Phone",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
@@ -433,16 +445,67 @@
           "events": {}
         },
         {
-          "id": "text_field_17",
-          "type": "text_field",
-          "label": "Gender",
-          "maxLength": 50,
-          "maxLines": 1,
+          "id": "date_picker_1",
+          "type": "date_picker",
+          "label": "Date Of Birth",
           "initialValue": "",
-          "hintText": "",
-          "enabled": true,
+          "minDate": null,
+          "maxDate": null,
           "required": true,
-          "events": {}
+          "dateFormat": "dd-MM-yyyy"
+        },
+        {
+          "id": "radio_1",
+          "type": "radio",
+          "label": "Gender",
+          "options": [
+            "Male",
+            "Female"
+          ],
+          "initialValue": "",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "employee",
+      "label": "Employee",
+      "type": "view",
+      "groups": [],
+      "components": [
+        {
+          "id": "Employee",
+          "type": "table",
+          "http": {
+            "method": "GET",
+            "url": "",
+            "headers": {},
+            "body": {},
+            "use_form_data": false
+          },
+          "width": 1000.0,
+          "columns": [
+            {
+              "header": "New Column",
+              "body": "",
+              "width": null
+            },
+            {
+              "header": "New Column",
+              "body": "",
+              "width": null
+            },
+            {
+              "header": "New Column",
+              "body": "",
+              "width": null
+            },
+            {
+              "header": "New Column",
+              "body": "",
+              "width": null
+            }
+          ]
         }
       ]
     },
@@ -501,52 +564,64 @@
           "events": {}
         },
         {
-          "id": "text_field_11",
-          "type": "text_field",
-          "label": "Phone",
-          "maxLength": 50,
-          "maxLines": 1,
+          "id": "dropdown_1",
+          "type": "dropdown",
+          "label": "Select Departement",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
           "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
+          "httpData": {
+            "method": "GET",
+            "url": "",
+            "headers": {},
+            "body": {},
+            "use_form_data": false
+          },
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
         },
         {
-          "id": "text_field_12",
-          "type": "text_field",
-          "label": "Departement",
-          "maxLength": 50,
-          "maxLines": 1,
+          "id": "dropdown_2",
+          "type": "dropdown",
+          "label": "Select Division",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
           "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
+          "httpData": {
+            "method": "GET",
+            "url": "",
+            "headers": {},
+            "body": {},
+            "use_form_data": false
+          },
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
         },
         {
-          "id": "text_field_13",
-          "type": "text_field",
-          "label": "Division",
-          "maxLength": 50,
-          "maxLines": 1,
+          "id": "dropdown_3",
+          "type": "dropdown",
+          "label": "Select Position",
+          "options": [
+            "Option 1",
+            "Option 2"
+          ],
           "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
-        },
-        {
-          "id": "text_field_14",
-          "type": "text_field",
-          "label": "Position",
-          "maxLength": 50,
-          "maxLines": 1,
-          "initialValue": "",
-          "hintText": "",
-          "enabled": true,
-          "required": true,
-          "events": {}
+          "httpData": null,
+          "optionKey": null,
+          "optionLabel": null,
+          "onChangeActions": [],
+          "required": false,
+          "dependsOn": []
         },
         {
           "id": "text_field_15",
@@ -561,9 +636,9 @@
           "events": {}
         },
         {
-          "id": "text_field_16",
+          "id": "text_field_11",
           "type": "text_field",
-          "label": "Date  Of Birth",
+          "label": "Phone",
           "maxLength": 50,
           "maxLines": 1,
           "initialValue": "",
@@ -573,16 +648,25 @@
           "events": {}
         },
         {
-          "id": "text_field_17",
-          "type": "text_field",
-          "label": "Gender",
-          "maxLength": 50,
-          "maxLines": 1,
+          "id": "date_picker_1",
+          "type": "date_picker",
+          "label": "Date Of Birth",
           "initialValue": "",
-          "hintText": "",
-          "enabled": true,
+          "minDate": null,
+          "maxDate": null,
           "required": true,
-          "events": {}
+          "dateFormat": "dd-MM-yyyy"
+        },
+        {
+          "id": "radio_1",
+          "type": "radio",
+          "label": "Gender",
+          "options": [
+            "Male",
+            "Female"
+          ],
+          "initialValue": "",
+          "required": true
         }
       ]
     }
@@ -602,6 +686,55 @@
     "gender": 4
   },
   "actions": [],
-  "actions_home": [],
+  "actions_home": [
+    {
+      "id": "create",
+      "type": "open_page",
+      "name": "Employee",
+      "on_success": "refresh",
+      "on_failure": "navigate_back",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "add_employee",
+      "icon": "Add",
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    },
+    {
+      "id": "update",
+      "type": "open_page",
+      "name": "Edit Employee",
+      "on_success": "refresh",
+      "on_failure": "navigate_back",
+      "is_multiple": false,
+      "reference": null,
+      "layout_form_id": "edit_employee",
+      "icon": null,
+      "icon_code": null,
+      "http": {
+        "method": "GET",
+        "url": "",
+        "headers": {},
+        "body": {},
+        "use_form_data": false
+      },
+      "width": 400.0,
+      "confirm_title": "Confirmation",
+      "confirm_message": "Are you sure you want to proceed?",
+      "icon_color": "#2196F3",
+      "permission": null
+    }
+  ],
   "bypass_all_permissions": false
 }
